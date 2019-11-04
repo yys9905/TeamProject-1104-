@@ -1,11 +1,14 @@
-
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
 /**
  * Write a description of class MyMouseListener here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class MyMouseListener
+public class MyMouseListener extends MouseMotionAdapter implements MouseListener
 {
     // instance variables - replace the example below with your own
     private int x;
