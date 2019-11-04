@@ -12,7 +12,28 @@ public class MyMouseListener extends MouseMotionAdapter implements MouseListener
 {
     JLabel ml;
     public MyMouseListener(JLabel label){
-        ml = label;
+        ml = label;       
+    }    
+    public void mouseEntered(MouseEvent e){
+        JPanel mp = (JPanel) e.getSource();    
+        mp.setBackground(Color.CYAN);
+    }
+
+    public void mousePressed(MouseEvent e){
+        ml.setText("MousePressed("+e.getX()+","+e.getY()+")");
+    }
+
+    public void mouseReleased(MouseEvent e){
+        ml.setText("MouseReleased("+e.getX()+","+e.getY()+")");
+    }
+
+    public void mouseClicked(MouseEvent e){
+        ml.setText("MouseClicked("+e.getX()+","+e.getY()+")");
+    }
+
+    public void mouseExited(MouseEvent e){
+        JPanel mp = (JPanel) e.getSource();    
+        mp.setBackground(Color.YELLOW);
     }
 
     public void mouseDragged(MouseEvent e){
@@ -23,7 +44,5 @@ public class MyMouseListener extends MouseMotionAdapter implements MouseListener
         ml.setText("MouseMoved (" + e.getX() + "," + e.getY() + ")");  
     }
 
-    
 }
-
     

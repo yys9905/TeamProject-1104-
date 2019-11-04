@@ -22,10 +22,14 @@ public class MyMouseFrame extends JFrame
         ml = new JLabel("No Mouse Event");
         mp.add(ml);
         
-        MyMouseListener ml = new MyMouseListener();
+        MyMouseListener mml = new MyMouseListener(ml);
+        mp.addMouseListener(mml);
+        mp.addMouseMotionListener(mml);
         
-        mp.addMouseListener(ml);
-        mp.addMouseMotionListener(ml);
+        this.add(mp);
         this.setVisible(true);
+    }
+    public JLabel getLabel(){
+        return ml;
     }
 }
