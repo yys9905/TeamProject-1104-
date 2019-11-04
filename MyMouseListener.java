@@ -14,17 +14,16 @@ public class MyMouseListener extends MouseMotionAdapter implements MouseListener
     public MyMouseListener(JLabel label){
         ml = label;
     }
+
     public void mouseDragged(MouseEvent e){
         ml.setText("MouseDragged (" + e.getX() + "," + e.getY() + ")");
     }
-    
+
     public void mouseMoved(MouseEvent e){
         ml.setText("MouseMoved (" + e.getX() + "," + e.getY() + ")");  
     }
-    
-    
+
     
 }
 
-   
     
