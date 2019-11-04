@@ -7,5 +7,5 @@
  */
 public class MyApp
 {
-    MyMouseFrame()
+    MyMouseFrame mf = new MyMouseFrame();
 }
