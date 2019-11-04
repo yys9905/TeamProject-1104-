@@ -1,11 +1,13 @@
 
 /**
- * Write a description of class MyApp here.
+ * MyMouseFrame클래스로부터 오브잭트를 생성해주는 클래스
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (2018315036 양유석, 2018315030 이가영, 2018315022 이지연)
+ * @version (2019.11.04)
  */
 public class MyApp
 {
-    MyMouseFrame()
+    public static void main(String[] args){
+        MyMouseFrame mf = new MyMouseFrame();
+    }
 }

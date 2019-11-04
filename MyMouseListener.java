@@ -10,23 +10,39 @@ import javax.swing.event.*;
  */
 public class MyMouseListener extends MouseMotionAdapter implements MouseListener
 {
-    public void mouseEntened(MouseEvent e){
-        e.getSource().setBackground(Color.CYAN);
+    JLabel ml;
+    public MyMouseListener(JLabel label){
+        ml = label;       
+    }    
+    public void mouseEntered(MouseEvent e){
+        JPanel mp = (JPanel) e.getSource();    
+        mp.setBackground(Color.CYAN);
     }
-    
+
     public void mousePressed(MouseEvent e){
-        ml.getSource("MousePressed("+e.getX()+","+e.getY()+")");
+        ml.setText("MousePressed("+e.getX()+","+e.getY()+")");
     }
-    
+
     public void mouseReleased(MouseEvent e){
-        ml.getSource("MouseReleased("+e.getX()+","+e.getY()+")");
+        ml.setText("MouseReleased("+e.getX()+","+e.getY()+")");
     }
-    
+
     public void mouseClicked(MouseEvent e){
-        ml.getSource("MouseClicked("+e.getX()+","+e.getY()+")");
+        ml.setText("MouseClicked("+e.getX()+","+e.getY()+")");
     }
-    
+
     public void mouseExited(MouseEvent e){
-        e.getSource().setBackground(Color.YELLOW);
+        JPanel mp = (JPanel) e.getSource();    
+        mp.setBackground(Color.YELLOW);
     }
+
+    public void mouseDragged(MouseEvent e){
+        ml.setText("MouseDragged (" + e.getX() + "," + e.getY() + ")");
+    }
+
+    public void mouseMoved(MouseEvent e){
+        ml.setText("MouseMoved (" + e.getX() + "," + e.getY() + ")");  
+    }
+
 }
+    
