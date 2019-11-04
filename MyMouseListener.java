@@ -10,27 +10,23 @@ import javax.swing.event.*;
  */
 public class MyMouseListener extends MouseMotionAdapter implements MouseListener
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class MyMouseListener
-     */
-    public MyMouseListener()
-    {
-        // initialise instance variables
-        x = 0;
+    public void mouseEntened(MouseEvent e){
+        e.getSource().setBackground(Color.CYAN);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void mousePressed(MouseEvent e){
+        ml.getSource("MousePressed("+e.getX()+","+e.getY()+")");
+    }
+    
+    public void mouseReleased(MouseEvent e){
+        ml.getSource("MouseReleased("+e.getX()+","+e.getY()+")");
+    }
+    
+    public void mouseClicked(MouseEvent e){
+        ml.getSource("MouseClicked("+e.getX()+","+e.getY()+")");
+    }
+    
+    public void mouseExited(MouseEvent e){
+        e.getSource().setBackground(Color.YELLOW);
     }
 }
