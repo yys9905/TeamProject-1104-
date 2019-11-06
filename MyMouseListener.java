@@ -27,9 +27,7 @@ public class MyMouseListener extends MouseMotionAdapter implements MouseListener
         ml.setText("MouseReleased("+e.getX()+","+e.getY()+")");
     }
 
-    public void mouseClicked(MouseEvent e){
-        ml.setText("MouseClicked("+e.getX()+","+e.getY()+")");
-    }
+    public void mouseClicked(MouseEvent e){}
 
     public void mouseExited(MouseEvent e){
         JPanel mp = (JPanel) e.getSource();    
